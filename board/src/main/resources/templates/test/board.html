@@ -1,0 +1,11 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <span>글제목</span>&nbsp;<span>글내용</span>&nbsp;총<span th:text="${cnt}"></span>건의 글이 있습니다 
+    <a href="/bboard/insertpage"><button type="submit">글등록</button></a><br>
+    <table>
+        <tr th:each="data: ${board}">
+            <td>
+                <p th:text="${data.title}"></p>
+            </td>
+        </tr>
+    </table>
+</html>
